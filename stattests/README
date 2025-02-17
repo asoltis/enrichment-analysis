@@ -1,0 +1,45 @@
+README file for stattests.py code.
+04/07/2017
+
+Tests included:
+    1) Fisher's exact test (left-tail, right-tail, two-tail)
+    2) Hypergeometric test (left-tail, right-tail, two-tail)
+
+NOTE: Two methods are included for computing the two-tail Fisher/Hypergeometric tests:
+1) 'double' (default): This method simply doubles the one-tail value. Quicker and simpler. 
+2) 'smallP': This is the method of summing all probabilities <= the actual p of the input table. 
+   This method requires more computation and is slower. 
+
+# Sample execution
+import stattests
+
+# Fisher exact test
+pvs = stattests.fishers_exact_test(12,5,29,2,TTmethod='smallP') # Using small p method
+
+# Hypergeometric test
+pvs = stattests.hypgeo_test(695,14000,2830,2724)
+
+##############
+# 09-21-2017 #
+##############
+
+Created C version of code with cython.
+- Ran python setup.py build_ext --inplace, using stattests.pyx
+- Removed previous stattests.pyc from old imports
+
+##############
+# 04-24-2018 #
+##############
+Included negative binomial probability function.
+
+##############
+# 04-16-2019 #
+##############
+Included Benjamini-Hochberge FDR function for correcting an array of p-values. Implementation returns corrected p-value array
+in same sort order as original input array.
+
+##############
+# 07-23-2019 #
+##############
+Included binomial probability function.
+

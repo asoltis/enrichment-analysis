@@ -1,0 +1,9 @@
+Hallmark
+GO_BP
+GO_MF
+GO_CC
+canonical_pathways
+Reactome
+KEGG
+TFtargets
+oncoSigs
