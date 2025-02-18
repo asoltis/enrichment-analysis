@@ -1,4 +1,4 @@
-Repository for Gene ontology and other pathway enrichment analysis scripts
+Repository for Gene ontology, kinase-substrate, and other pathway enrichment analysis scripts
 
 ## GO directory
 - ontology_scripts sub-directory
@@ -16,6 +16,10 @@ Repository for Gene ontology and other pathway enrichment analysis scripts
   gene lists against gene sets (valid sets listed in accompanying file). Currently reads MSigDB *.gmt files
   to load/create gene sets for analysis. 
 - "valid_gene_sets.txt" file lists (current) valid sets to choose from
+
+## kinase_substrate_enrichment
+- Includes code to run three distinct kinase-substrate enrichment methods
+- Also includes script to combine p-values from three methods into one unified significance score
 
 ## stattests directory
 - helper statistical functions for enrichment analysis routines
